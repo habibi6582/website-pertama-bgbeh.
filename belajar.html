@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Belajar Coding!</title>
+    <style>
+        /* Dasar & Tema Gelap ala Programmer */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Code', Consolas, Monaco, monospace, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Kartu Utama */
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: #141b2d;
+            padding: 35px 25px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 2px solid #22c55e; /* Warna hijau indikator sukses/mulai */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efek Latar Belakang Kode Ringan */
+        .card::before {
+            content: "</>";
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            font-size: 8rem;
+            color: rgba(34, 197, 94, 0.05);
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+        /* Badge Status */
+        .badge {
+            display: inline-block;
+            background-color: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #22c55e;
+        }
+
+        /* Judul Utama */
+        h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .motivation {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        /* Kotak Progress Belajar */
+        .progress-box {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 25px;
+            border: 1px solid #334155;
+        }
+
+        .progress-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Daftar Checklist */
+        .task-list {
+            list-style: none;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .task-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Kotak Checklist Hijau */
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            background-color: #22c55e;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0b0f19;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+
+        /* Tombol Pamer / Share */
+        .btn-share {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-share:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .btn-share:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Status Badge -->
+        <span class="badge">ALASAN KESERINGAN DI KANTOR</span>
+        
+        <!-- Judul Menantang -->
+        <h1>DAY 1 BELAJAR CODING</h1>
+        <p class="motivation">"aku habibi atau bgbeh, seorang santri ponpes nurul huda al-islami pekanbaru."</p>
+        
+        <!-- Apa saja yang dipelajari hari ini -->
+        <div class="progress-box">
+            <h3>📂 Progress Hari Ini:</h3>
+            <ul class="task-list">
+                <li class="task-item">
+                    <span class="checkbox">✓</span>
+                    <span>Belajar Struktur Dasar CODING</span>
+                </li>
+                <li class="task-item">
+                    <span class="checkbox">✓</span>
+                    <span>Belajar MTK mandiri</span>
+                </li>
+                <li class="task-item">
+                    <span class="checkbox">✓</span>
+                    <span>Bikin Website Keren Sendiri!</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tombol Interaktif saat Dipamerin -->
+        <button class="btn-share" onclick="celebrate()">Coba Tekan tombol ini !</button>
+    </div>
+
+    <script>
+        // Efek interaktif sederhana saat temanmu menekan tombol
+        function celebrate() {
+            alert("Kece kaleee kalee, inilah hasil keseringan di kantor, BUKAN MAIN MOBILE LEGENDS+SCROL SCROL SAMPE MAMPUS! 🙌💻");
+        }
+    </script>
+
+</body>
+</html>
